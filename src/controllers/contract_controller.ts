@@ -3,6 +3,7 @@ import { ethers } from "ethers";
 export class ContractController {
   contractAddress: string = "";
   contractABI = [{}];
+  provider:string;
   constructor() {
     this.contractAddress = "0x472470A9601Ec7f078Be85F0dDE0FF8d1883Df51"; //contract address
     this.contractABI  = [
@@ -35,10 +36,11 @@ export class ContractController {
         type: "function",
       },
     ]; //ABI of the contract
+    this.provider="http://127.0.0.1:7545";// Replace with your Ethereum provider URL
   }
 
   async connectToContract(): Promise<ethers.Contract> {
-    const provider = new ethers.JsonRpcProvider("http://127.0.0.1:7545"); // Replace with your Ethereum provider URL
+    const provider = new ethers.JsonRpcProvider(this.provider); 
     const signer = await provider.getSigner();
     const contract = new ethers.Contract(
       this.contractAddress,
