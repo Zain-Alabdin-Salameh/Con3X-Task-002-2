@@ -33,7 +33,7 @@ const contractABI = [{
     "type": "function"
   }]; //ABI of the contract
 
-async function connectToContract() {
+export async function connectToContract() {
     const provider = new ethers.JsonRpcProvider('http://127.0.0.1:7545'); // Replace with your Ethereum provider URL
     const signer = await provider.getSigner()
     const contract = new ethers.Contract(contractAddress, contractABI, signer);
