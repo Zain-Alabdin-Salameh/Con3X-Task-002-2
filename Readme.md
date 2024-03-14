@@ -18,4 +18,25 @@ Bonus (additional nice to have):
 * Run the unit test in GitHub actions on every code push or MR.
 
 
-I have ,ade a Simple Express Application that provides the requested functionality.
+I have made a Simple Express Application that provides the requested functionality.
+you can find contract solidity code at ./contracts/MessageContract.sol
+tools used :
+1- Ganache for emulating ethereum network localy.
+2- Truffle to compile solidity code.
+3- Express.JS for web application.
+
+How to run the code :
+1- install Ganache in your machine.
+2- install truffle globaly.
+3- run yarn install.
+4- run Ganache.
+5- replace provider variable at contract controller with your Ethereum provider URL.
+6- replace this with your ethereum provider data at truffle-config.js.
+    development: {
+        host: "127.0.0.1",     // Localhost (default: none)
+        port: 7545,            // Standard Ethereum port (default: none)
+        network_id: "5777",       // Any network (default: none)
+    },
+7- run truffle migrate.
+8- run truffle deploy.
+9- run yarn start to run the application at port 3000.
