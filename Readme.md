@@ -48,6 +48,8 @@ How to run the code :
 
 8- run `truffle deploy`.
 
-9- run `yarn start` to run the application at port 3000.
+9-replace contract address in at contract controller with your deployed contracr address.
 
-10- to run test run this command : `yarn test`.
+10- run `yarn start` to run the application at port 3000.
+
+11- to run test run this command : `yarn test`.
