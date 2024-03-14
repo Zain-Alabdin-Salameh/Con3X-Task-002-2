@@ -36,7 +36,8 @@ How to run the code :
         host: "127.0.0.1",     // Localhost (default: none)
         port: 7545,            // Standard Ethereum port (default: none)
         network_id: "5777",       // Any network (default: none)
-    },
-7- run truffle migrate.
-8- run truffle deploy.
-9- run yarn start to run the application at port 3000.
+    }
+7- run `truffle migrate`.
+8- run `truffle deploy`.
+9- run `yarn start` to run the application at port 3000.
+10- to run test run this command : `yarn test`
